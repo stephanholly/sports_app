@@ -1,0 +1,73 @@
+<div class="loginBG">
+  <nav class="nav-extended light-green">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Search</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/users/{{cookie}}">Home</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs tabs-transparent">
+            <li class="tab col s12 m6 l6"><a class="active" href="#type-search">Search by sport</a></li>
+            <li class="tab col s12 m6 l6"><a href="#date-search">Search by date</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="grey lighten-3 rounded-box opacity-results center">
+      <div class="spacer">
+
+      </div>
+      <div id="type-search" class="col s12">
+        <div class="row">
+          <form class="type-form" action="/results/type" method="POST">
+            <div class="col s12 m8 offset-m2">
+              <label for="type"><h3 class="black-text">Enter a Sport</h3></label>
+              <input type="text" name="type" placeholder="Sport type">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m4 offset-m2">
+            <input class="btn-large light-green" type="submit" name="typesubmit" value="Search by Sport">
+          </div>
+          </form>
+          <div class="col s12 m4">
+            <form class="all-events-form" action="/results/all" method="POST">
+              <input class="btn-large light-green" type="submit" name="allsubmit" value="Search All">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="date-search" class="">
+        <div class="row">
+          <div class="col s12 m8 offset-m2">
+            <form class="date-form" action="/results/date" method="POST">
+              <label for="search-date"><h3 class="black-text">Enter a Date</h3></label>
+              <input type="date" id="search-date" name="date">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m4 offset-m2">
+            <input class="btn-large light-green" type="submit" name="datesubmit" value="Search by Date">
+            </form>
+          </div>
+          <div class="col s12 m4">
+            <form class="all-events-form" action="/results/all" method="POST">
+              <input class="btn-large light-green" type="submit" name="allsubmit" value="Search All">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="spacer">
+
+      </div>
+    </div>
+  </div>
+</div>

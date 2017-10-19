@@ -1,0 +1,41 @@
+<div class="resultBG">
+  <nav>
+    <div class="nav-wrapper light-green">
+      <div class="container">
+        <a href="#" class="brand-logo center light">Results</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/newEvent">Create</a></li>
+          <li><a href="/search">Search</a></li>
+          <li><a href="../users/{{cookie}}">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="spacer">
+
+    </div>
+    <div class="row center">
+      {{#each results}}
+        <div class="col m6">
+          <div class="card opacity-results white z-depth-5  ">
+            <div class="card-info">
+              <div class="section">
+                <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.0);">{{this.title}}</span>
+              </div>
+              <div class="divider"></div>
+            </div>
+            <div class="card-content">
+              <p>Location: {{this.location}}</p>
+              <p>Date: {{formatDate this.date "MM-DD-YYYY"}}</p>
+              <p>Time: {{formatTime this.time "h:mm A"}}</p>
+              <p>Type of Event: {{this.type}}</p>
+            </div>
+            <div class="card-action">
+              <a href="/events/{{this.id}}">More Info</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>

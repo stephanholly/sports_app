@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.splashBG {
+  background: url('splash-squashed.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+}
+
+.login-box {
+  width: 40vw;
+  margin-left: 15vw;
+}
+
+.create-event-width {
+  width: 100%;
+}
+
+.ind-event-center {
+  margin-left: 10vw;
+}
+
+.loginBG {
+  background: url('login.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  width: auto;
+}
+
+.resultBG {
+  background: url('login.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.newEventBG {
+  background: url('login.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  width: auto;
+}
+
+.opacity {
+  background: #fff;
+  opacity: .5;
+  z-index: -10;
+  font-size: 32px;
+}
+
+.opacity-results {
+  background: #fff;
+  opacity: .94;
+  z-index: ;
+}
+
+.field-day-splash {
+  font-size: 8rem;
+}
+
+.rounded-box {
+  border-radius: 20px;
+}
+
+.nav-content {
+  justify-content: space-between;
+  text-align: center;
+}
+
+.spacer {
+  height: 5vh;
+}
+
+hr {
+  width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.individual-event, .pastEvent, .currentEvent, .upcomingEvent {
+  font-size: 1.5em;
+
+  text-align: center;
+  margin: 0 auto;
+}

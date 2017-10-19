@@ -1,0 +1,78 @@
+<div class="newEventBG">
+  <nav>
+    <div class="nav-wrapper light-green">
+      <div class="container">
+        <a href="#" class="brand-logo center light">Edit Event</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <!-- <li><a href="/newEvent">Create</a></li> -->
+          <li><a href="/search">Search</a></li>
+          <li><a href="/users/{{cookie}}">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="spacer">
+
+  </div>
+  <div class="container grey lighten-3 rounded-box opacity-results center section valign-wrapper center ">
+    <form class="create-event-form create-event-width" action="/events/{{eventInfo.id}}/edit" method="POST">
+      <div class="spacer"></div>
+      <div class="row center">
+        <div class="col s12 m4 offset-m2">
+          <input type="text" name="title" value="{{eventInfo.title}}" required>
+        </div>
+        <div class="col s12 m4">
+          <!-- Google Auto Complete Bar for location -->
+          <input type="text" name="location" value="{{eventInfo.location}}" required>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="col s12 m4 offset-m2">
+          <label for="event-date">Enter the date of your event:</label>
+          <input type="date" id="event-date" name="date" value=`{{formatDate eventInfo.date "MMM/DD/YYYY"}}`>
+          <span class="validity"></span>
+        </div>
+        <div class="col s12 m4">
+          <label for="time">What Time does your event start?</label>
+          <input id="time" type="time" name="time" placeholder="hrs:mins" value="{{eventInfo.time}}" pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$" class="inputs duration t1 time hrs" required>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="col s12 m4 offset-m2">
+          <input type="text" name="type" value="{{eventInfo.type}}">
+        </div>
+        <div class="col s12 m4">
+          <label for="private">Please specify the privacy of your event:</label>
+          <div class="radio center">
+            <input type="radio" id="public" name="private" value="false" checked>
+            <label for="public">Public (Open Event)</label>
+            <br>
+            <input type="radio" id="private" name="private" value="true">
+            <label for="private">Private (Invite Only)</label>
+            <br>
+          </div>
+        </div>
+        <div class="row center">
+          <div class="col s12 m8 offset-m2">
+            <input type="text" name="description" value="{{eventInfo.description}}" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m4 offset-m2">
+            <div class="submit">
+              <input class="btn-large light-green" type="submit" name="submit" value="Edit Event">
+            </div>
+    </form>
+    </div>
+    <div class="col s12 m4">
+      <form class="deleteEvent" action="/events/{{eventInfo.id}}/delete" method="post">
+        <div class="delete">
+          <input class="btn-large light-green" type="submit" name="submit" value="Delete Event">
+        </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,70 @@
+<div class="newEventBG">
+  <nav>
+    <div class="nav-wrapper light-green">
+      <div class="container">
+      <a href="#" class="brand-logo center light">Create an Event</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- <li><a href="/newEvent">Create</a></li> -->
+        <li><a href="/search">Search</a></li>
+        <li><a href="/users/{{cookie}}">Home</a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <div class="spacer">
+
+  </div>
+  <div class="container grey lighten-3 rounded-box opacity-results center section valign-wrapper center ">
+          <form class="create-event-form create-event-width" action="/newEvent" method="POST">
+            <div class="spacer"></div>
+            <div class="row center">
+              <div class="col s12 m4 offset-m2">
+                <input type="text" name="title" placeholder="Event Title" required>
+              </div>
+              <div class="col s12 m4">
+                <!-- Google Auto Complete Bar for location -->
+                <input type="text" name="location" placeholder="Location of Event" required>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="col s12 m4 offset-m2">
+                <label for="event-date">Enter the date of your event:</label>
+                <input type="date" id="event-date" name="date">
+                <span class="validity"></span>
+              </div>
+              <div class="col s12 m4">
+                <label for="time">What Time does your event start?</label>
+                <input id="time" type="time" name="time" placeholder="hrs:mins" value="" pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$" class="inputs duration t1 time hrs" required>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="col s12 m4 offset-m2">
+                <input type="text" name="type" placeholder="What Will You Be Playing?">
+              </div>
+              <div class="col s12 m4">
+                <label for="private">Please specify the privacy of your event:</label>
+                <div class="radio center">
+                  <input type="radio" id="public" name="private" value="false" checked>
+                  <label for="public">Public (Open Event)</label>
+                  <br>
+                  <input type="radio" id="private" name="private" value="true">
+                  <label for="private">Private (Invite Only)</label>
+                  <br>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="col s12 m8 offset-m2">
+                  <input type="text" name="description" placeholder="Brief Description" required>
+                </div>
+              </div>
+              <div class="col s12 m8 offset-m2">
+                <input class="btn-large light-green" type="submit" name="submit" value="Create Event">
+              </div>
+              </div>
+
+
+              </form>
+      </div>
+    </div>
+  </div>
+</div>
